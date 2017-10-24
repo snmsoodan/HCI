@@ -98,4 +98,8 @@ body{
     padding-top: 10px;
 }
 
+.navbar-header{
+    float:none;
+}
+
 /*******************************************/

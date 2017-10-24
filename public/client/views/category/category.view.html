@@ -1,0 +1,107 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <p class="navbar-brand" href="#" style="color: red;">
+                Gym Scheduler
+            </p>
+
+            <div class="input-group pull-right" style="margin-top: 10px; width: 800px">
+                <input type="text" class="form-control" placeholder="Search for Equipments, Trainers and Classes">
+                <span class="input-group-btn">
+        <!- -<button class="btn btn-default" type="button">Go!</button>-->
+                <a ng-click="model.updateUser(model.user)" class="btn btn-default" style="height: 34px">
+          <span class="glyphicon glyphicon-search"></span>
+                </a>
+      </span>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</nav>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" style="margin-top: 50px;background-color: darkgrey">
+    <div class="container-fluid" style="align-items: center">
+
+        <div class="col-md-3 text-center" >
+
+            <a style="text-align: center" href="#/user/{{model.id}}" role="button">
+
+                    <h3> <span class="glyphicon glyphicon-th-list"></span>
+                        Category</h3>
+            </a>
+        </div>
+        <div class="col-md-3 text-center" >
+            <a style="text-align: center" href="#/user/{{model.id}}" role="button">
+                <h3 style="color: black">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    Dashboard</h3>
+            </a>
+        </div>
+        <div class="col-md-3 text-center" >
+            <a style="text-align: center" href="#/user/{{model.id}}" role="button">
+                <h3 style="color: black">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Profile</h3>
+            </a>
+        </div>
+        <div class="col-md-3 text-center" >
+            <a style="text-align: center" href="#/home" role="button">
+                <h3 style="color: black">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    Logout</h3>
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!--<h2 align="center" style="margin-top: 300px; color: red">Gym Scheduler</h2>-->
+
+
+
+    <!--<div align="center" class="container">-->
+        <!--<div class="input-group" style="margin-bottom: 10px">-->
+            <!--<input type="text" class="form-control" placeholder="Search for Equipments, Trainers and Classes">-->
+            <!--<span class="input-group-btn">-->
+        <!--<!- -<button class="btn btn-default" type="button">Go!</button>&ndash;&gt;-->
+                <!--<a ng-click="model.updateUser(model.user)" class="btn btn-default" style="height: 34px">-->
+          <!--<span class="glyphicon glyphicon-search"></span>-->
+                <!--</a>-->
+      <!--</span>-->
+        <!--</div>-->
+
+
+        <!--<a href="#/login"-->
+           <!--class="btn btn-primary btn-block" style="width: 250px">Login</a>-->
+
+    <!--</div>-->
+
+        <div align="center" class="container" style="margin-top: 300px;">
+            <div class="col-md-4 text-center" >
+              <a href="#/login" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Abs</a>
+            </div>
+            <div class="col-md-4 text-center" >
+                <a href="#/login" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Back</a>
+            </div>
+            <div class="col-md-4 text-center" >
+                <a href="#/login" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Chest</a>
+            </div>
+            <div class="col-md-4 text-center" >
+                <a href="#/login" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Arms</a>
+            </div>
+            <div class="col-md-4 text-center" >
+                <a href="#/login" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Cardio</a>
+            </div>
+            <div class="col-md-4 text-center" >
+                <a href="#/login" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Legs</a>
+            </div>
+
+
+        </div>
