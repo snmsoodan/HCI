@@ -32,7 +32,7 @@
 
             <a style="text-align: center" href="#/category" role="button">
 
-                    <h4> <span class="glyphicon glyphicon-th-list"></span>
+                    <h4 style="color: black"> <span class="glyphicon glyphicon-th-list"></span>
                         Category</h4>
             </a>
         </div>
@@ -83,25 +83,33 @@
 
     <!--</div>-->
 
-        <div align="center" class="container" style="margin-top: 300px;">
+        <div align="center" class="container-fluid" style="margin-top: 200px;">
             <div class="col-md-4 text-center" >
-              <a href="#/category/Abs" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Abs</a>
+                <H2>{{model.instrumentName}} </H2>
             </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Back" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Back</a>
+        </div>
+
+        <div align="center" class="container" style="margin-top: 20px;">
+
+            <div class="col-md-6 text-center" >
+              <a href="#/type/{{model.ins._id}}/instrument/{{model.ins.n1}}" class="btn  btn-block" style="width: 300px;margin-bottom: 30px;background-color: darkgrey;color: black">{{model.ins.n1}}</a>
             </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Chest" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Chest</a>
+            <div class="col-md-6 text-center" >
+                <a href="#/type/{{model._id}}/instrument/{{model.ins.n2}}" class="btn  btn-block" style="width: 300px;margin-bottom: 30px;background-color: darkgrey;color: black">{{model.ins.n2}}</a>
             </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Arms" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Arms</a>
+            <div class="col-md-6 text-center" >
+                <a href="#/type/{{model._id}}/instrument/{{model.ins.n3}}" class="btn  btn-block" style="width: 300px;margin-bottom: 30px;background-color: darkgrey;color: black">{{model.ins.n3}}</a>
             </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Cardio" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Cardio</a>
+            <div class="col-md-6 text-center" >
+                <a href="#/type/{{model._id}}/instrument/{{model.ins.n4}}" class="btn  btn-block" style="width: 300px;margin-bottom: 30px;background-color: darkgrey;color: black">{{model.ins.n4}}</a>
             </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Legs" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Legs</a>
+            <div class="col-md-6 text-center" >
+                <a href="#/type/{{model._id}}/instrument/{{model.ins.n5}}" class="btn  btn-block" style="width: 300px;margin-bottom: 30px;background-color: darkgrey;color: black">{{model.ins.n5}}</a>
             </div>
+            <div class="col-md-6 text-center" >
+                <a href="#/type/{{model._id}}/instrument/{{model.ins.n6}}" class="btn  btn-block" style="width: 300px;margin-bottom: 30px;background-color: darkgrey;color: black">{{model.ins.n6}}</a>
+            </div>
+
 
 
         </div>

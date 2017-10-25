@@ -28,7 +28,17 @@
                 controllerAs: "model"
             })
 
+            .when("/category/:cid", {
+                templateUrl: "client/views/category/specificCategory.view.html",
+                controller: "specificCategoryController",
+                controllerAs: "model"
+            })
 
+            .when("/type/:tid/instrument/:id", {
+                templateUrl: "client/views/category/bookInstrument.view.html",
+                controller: "bookInstrumentController",
+                controllerAs: "model"
+            })
 
 
             .otherwise({
