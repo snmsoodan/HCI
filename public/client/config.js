@@ -28,6 +28,12 @@
                 controllerAs: "model"
             })
 
+            .when("/profile", {
+                templateUrl: "client/views/profile/profile.view.html",
+                controller: "ProfileController",
+                controllerAs: "model"
+            })
+
             .when("/category/:cid", {
                 templateUrl: "client/views/category/specificCategory.view.html",
                 controller: "specificCategoryController",
@@ -37,6 +43,12 @@
             .when("/type/:tid/instrument/:id", {
                 templateUrl: "client/views/category/bookInstrument.view.html",
                 controller: "bookInstrumentController",
+                controllerAs: "model"
+            })
+
+            .when("/dashboard", {
+                templateUrl: "client/views/category/dashboard.view.html",
+                controller: "dashboardController",
                 controllerAs: "model"
             })
 
