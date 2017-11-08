@@ -4,8 +4,7 @@
         .config(Configure);
 
 
-    function Configure($routeProvider,$locationProvider) {
-        $locationProvider.hashPrefix('');
+    function Configure($routeProvider) {
 
         $routeProvider
 
@@ -25,13 +24,19 @@
             .when("/category", {
                 templateUrl: "client/views/category/category.view.html",
                 controller: "CategoryController",
-                controllerAs: "model"
+                controllerAs: "model",
+                resolve:{
+                    loggedIn:checkLoggedIn
+                }
             })
 
             .when("/profile", {
                 templateUrl: "client/views/profile/profile.view.html",
                 controller: "ProfileController",
-                controllerAs: "model"
+                controllerAs: "model",
+                resolve:{
+                    loggedIn:checkLoggedIn
+                }
             })
 
             .when("/category/:cid", {
@@ -57,6 +62,27 @@
                 redirectTo: "home"
             });
 
+
+        function checkLoggedIn(UserService,$location,$q,$rootScope) {
+            var deferred=$q.defer();
+            UserService
+                .loggedIn()
+                .then(function (response) {
+                    var user=response.data;
+                    console.log(user);
+                    if(user === '0'){
+                        $rootScope.currentUser = null;
+                        deferred.reject();
+                        $location.url("home");
+                    }else{
+                        $rootScope.currentUser=user;
+                        deferred.resolve();
+                    }
+                },function (err) {
+                    $location.url("home");
+                });
+            return deferred.promise;
+        }
 
             }
 

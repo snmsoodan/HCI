@@ -1,19 +1,21 @@
 (function() {
-    "use strict";
     angular.module("ServiceLearningApp")
         .controller("CategoryController",CategoryController);
 
-
-
-    function CategoryController($rootScope,$location) {
+    function CategoryController($rootScope,$location,UserService) {
         var vm = this;
 
 
-        function init(){
+        var id=$rootScope.currentUser._id;
+        console.log(id)
 
+        function init(){
+            console.log("category page")
         }init();
 
 
 
     }
+
+
 })();

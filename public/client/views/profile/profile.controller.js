@@ -10,16 +10,21 @@
         {_id: "456", username: "dean", password: "dean", firstName: "Joe",   lastName: "Dean",role:"partner" }
     ]
 
-    function ProfileController($rootScope,$location,$routeParams) {
+
+
+    function ProfileController($rootScope,UserService) {
         var vm = this;
-        vm.message = null;
-        vm.id = $routeParams.id;
+        var id=$rootScope.currentUser._id;
+        console.log(id)
 
         function init(){
+            UserService
+                .findUserById(id)
+                .then(function (response) {
+                    vm.user=response.data;
+                })
 
         }init();
-
-
 
     }
 })();
