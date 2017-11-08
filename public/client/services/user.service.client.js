@@ -8,6 +8,7 @@
                 logout: logout,
                 loggedIn: loggedIn,
                 findUserById:findUserById,
+                updateUser:updateUser,
             };
             return api;
 
@@ -23,6 +24,12 @@
             function logout() {
                 return $http.post("/api/logout");
             }
+
+            function updateUser(id,newUser) {
+                var url="/api/user/"+id;
+                return $http.put(url,newUser);
+            }
+
         }
     }
 

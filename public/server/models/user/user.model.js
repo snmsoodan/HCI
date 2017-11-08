@@ -7,7 +7,8 @@ module.exports = function () {
     var api = {
         findUserByGoogleId:findUserByGoogleId,
         createUser: createUser,
-        findUserById:findUserById
+        findUserById:findUserById,
+        updateUser:updateUser
 
     };
 
@@ -26,6 +27,17 @@ module.exports = function () {
     function findUserById(userId) {
         console.log(userId);
         return UserInfo.findById(userId);
+    }
+
+    function updateUser(id,newUser) {
+
+        return UserInfo
+            .update({_id:id},{
+                $set: {
+                    firstName:newUser.firstName,
+                    lastName:newUser.lastName,
+                }
+            });
     }
 
 }

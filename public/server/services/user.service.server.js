@@ -16,6 +16,7 @@ module.exports = function(app,userModel) {
     app.get("/api/loggedIn",loggedIn);
     app.post("/api/logout",logout);
     app.get("/api/user/:userId",findUserById);
+    app.put("/api/user/:userId",updateUser);
 
 
     passport.serializeUser(serializeUser);
@@ -112,6 +113,19 @@ module.exports = function(app,userModel) {
             .findUserById(id)
             .then(function (user) {
                 res.send(user);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
+    }
+
+    function updateUser(req,res) {
+        var newUser=req.body;
+        var id=req.params.userId;
+
+        userModel
+            .updateUser(id,newUser)
+            .then(function (status) {
+                res.send(200);
             },function (error) {
                 res.statusCode(404).send(error);
             })
