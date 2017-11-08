@@ -10,26 +10,26 @@
     ]
 
 
-    function dashboardController($rootScope,$location,$routeParams) {
+    function dashboardController($rootScope,$location,$routeParams,UserService) {
         var vm = this;
+        vm.logout=logout;
 
 
         function init(){
-            // vm.instrumentName=$routeParams.id;
-            // vm.type=$routeParams.tid;
-
-            // console.log(vm.instrumentName)
-            // for(var i in instruments)
-            // {
-            //     if(instruments[i]._id===vm.instrumentName)
-            //     {
-            //         vm.ins=instruments[i];
-            //     }
-            // }
             vm.ins=instruments[0];
-
-        // console.log(vm.ins);
         }init();
+
+        function logout() {
+            UserService
+                .logout()
+                .then(
+                    function (response) {
+                        $location.url("/home")
+                    },function (error) {
+                        $location.url("/home")
+                    }
+                )
+        }
 
 
 

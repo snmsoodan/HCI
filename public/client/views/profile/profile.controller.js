@@ -4,9 +4,10 @@
         .controller("ProfileController",ProfileController);
 
 
-    function ProfileController($rootScope,UserService) {
+    function ProfileController($rootScope,UserService,$location) {
         var vm = this;
         vm.updateUser=updateUser;
+        vm.logout=logout;
 
         var id=$rootScope.currentUser._id;
         console.log(id)
@@ -27,6 +28,18 @@
                     console.log(response.data);
                     vm.success="Update Successfull";
                 })
+        }
+
+        function logout() {
+            UserService
+                .logout()
+                .then(
+                    function (response) {
+                        $location.url("/home")
+                    },function (error) {
+                        $location.url("/home")
+                    }
+                )
         }
 
     }
