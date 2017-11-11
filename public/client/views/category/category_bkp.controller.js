@@ -1,8 +1,8 @@
 (function() {
     angular.module("ServiceLearningApp")
-        .controller("CategoryController1",CategoryController);
+        .controller("CategoryController1",CategoryController1);
 
-    function CategoryController($rootScope,$location,UserService,$scope) {
+    function CategoryController1($rootScope,$location,UserService,$scope) {
         var vm = this;
         vm.logout=logout;
 
