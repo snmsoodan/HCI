@@ -37,7 +37,7 @@
             </li>
 
             <li ng-repeat="category in model.categories" class="list-group-item"   >
-                <a ng-if="category.name==model.categoryName" href="#/category/{{category.name}}"><b>{{category.name}}</b></a>
+                <a ng-if="category.name==model.categoryName" href="#/category/{{category.name}}"><b style="font-size: medium">{{category.name}}</b></a>
 
                 <a ng-if="category.name!=model.categoryName" href="#/category/{{category.name}}">{{category.name}}</a>
             </li>
