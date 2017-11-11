@@ -1,107 +1,70 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
+<nav class=" header-style navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-            <p class="navbar-brand" href="#" style="color: red;">
-                Gym Scheduler
-            </p>
-
-            <div class="input-group pull-right" style="margin-top: 10px; width: 800px">
-                <input type="text" class="form-control" placeholder="Search for Equipments, Trainers and Classes">
-                <span class="input-group-btn">
-        <!- -<button class="btn btn-default" type="button">Go!</button>-->
-                <a href="#/type/Abs/instrument/Adjustable Sit Up Benches" class="btn btn-default" style="height: 34px">
-          <span class="glyphicon glyphicon-search"></span>
-                </a>
-      </span>
-            </div>
+    <div  class=" col-md-4 ">
+        <a href="#/category/Abs" class="navbar-brand">Gym Scheduler</a>
+    </div>
 
 
-        </div>
+    <div  ng-show ="currentUser" class="col-md-8" style="padding-top: 15px">
 
-
+            <a style="color: white;font-size: large" ng-click="model.logout()" class="fa fa-sign-out pull-right" aria-hidden="true">Log out</a>
 
     </div>
+
+
 </nav>
 
+<div class="container-fluid" style="margin-top: 150px">
 
-<nav class="navbar navbar-default navbar-fixed-top" style="margin-top: 50px;background-color: darkgrey">
-    <div class="container-fluid" style="align-items: center">
+    <!--{{model.categories}}-->
+    <div class="col-md-2 right-line1" >
 
-        <div class="col-md-3 text-center" >
+        <ul class="list-group">
+            <li class="list-group-item">
+             <a href="#/profile"> Profile</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#/dashboard">Dashboard</a>
+            </li>
 
-            <a style="text-align: center" href="#/category" role="button">
 
-                    <h4> <span class="glyphicon glyphicon-th-list"></span>
-                        Category</h4>
-            </a>
-        </div>
-        <div class="col-md-3 text-center" >
-            <a style="text-align: center" href="#/dashboard" role="button">
-                <h4 style="color: black">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    Dashboard</h4>
-            </a>
-        </div>
-        <div class="col-md-3 text-center" >
-            <a style="text-align: center" href="#/profile" role="button">
-                <h4 style="color: black">
-                    <span class="glyphicon glyphicon-user"></span>
-                    Profile</h4>
-            </a>
-        </div>
-        <div class="col-md-3 text-center" >
-            <a ng-click="model.logout()" style="text-align: center" href="#/home" role="button">
-                <h4 style="color: black">
-                    <span class="glyphicon glyphicon-log-out"></span>
-                    Logout</h4>
-            </a>
-        </div>
+
+        </ul>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b style="color: red;">All Categories</b>
+            </li>
+
+            <li ng-repeat="category in model.categories" class="list-group-item"   >
+                <a ng-if="category.name==model.categoryName" href="#/category/{{category.name}}"><b>{{category.name}}</b></a>
+
+                <a ng-if="category.name!=model.categoryName" href="#/category/{{category.name}}">{{category.name}}</a>
+            </li>
+
+        </ul>
 
     </div>
-</nav>
+    <div class="col-md-2" style="align:center" >
+
+    </div>
+
+    <div class="col-md-5" style="align:center" >
+
+        <h3 style="color: darkred">Equipments availabe under Category: {{model.categoryName}}</h3>
+
+        <ul class="list-group" style="margin-top: 70px">
+
+            <li ng-repeat="p in model.subcategory" class="list-group-item" >
+                <a href="#/admin/{{model.aid}}/adminPartnerList/{{p._id}}/proposal/{{p.applicationId}}">{{p.name}}</a>
+                <a class="btn btn-success pull-right" style="height: 29px" href="#">View Eqipment Availability</a>
+            </li>
+
+        </ul>
+
+    </div>
 
 
-<!--<h2 align="center" style="margin-top: 300px; color: red">Gym Scheduler</h2>-->
 
 
-
-    <!--<div align="center" class="container">-->
-        <!--<div class="input-group" style="margin-bottom: 10px">-->
-            <!--<input type="text" class="form-control" placeholder="Search for Equipments, Trainers and Classes">-->
-            <!--<span class="input-group-btn">-->
-        <!--<!- -<button class="btn btn-default" type="button">Go!</button>&ndash;&gt;-->
-                <!--<a ng-click="model.updateUser(model.user)" class="btn btn-default" style="height: 34px">-->
-          <!--<span class="glyphicon glyphicon-search"></span>-->
-                <!--</a>-->
-      <!--</span>-->
-        <!--</div>-->
-
-
-        <!--<a href="#/login"-->
-           <!--class="btn btn-primary btn-block" style="width: 250px">Login</a>-->
-
-    <!--</div>-->
-
-        <div align="center" class="container" style="margin-top: 300px;">
-            <div class="col-md-4 text-center" >
-              <a href="#/category/Abs" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Abs</a>
-            </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Back" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Back</a>
-            </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Chest" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Chest</a>
-            </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Arms" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Arms</a>
-            </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Cardio" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Cardio</a>
-            </div>
-            <div class="col-md-4 text-center" >
-                <a href="#/category/Legs" class="btn  btn-block" style="width: 300px;margin-bottom: 15px;background-color: darkgrey;color: black">Legs</a>
-            </div>
-
-
-        </div>
+</div>

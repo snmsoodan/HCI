@@ -1,12 +1,17 @@
 (function() {
-    "use strict";
     angular.module("ServiceLearningApp")
-        .controller("HomeController",HomeController);
+        .controller("CategoryController1",CategoryController);
 
-
-
-    function HomeController($rootScope,$location,$http,$scope) {
+    function CategoryController($rootScope,$location,UserService,$scope) {
         var vm = this;
+        vm.logout=logout;
+
+        var id=$rootScope.currentUser._id;
+        console.log(id)
+
+        function init(){
+            console.log("category page")
+        }init();
 
         $scope.countryList = [
             "Adjustable Sit Up Benches", "Bar","Ab Wheel", "Stability Ball", "Roman Chairs", "Hyper Bench", "SEATED CABLE ROW", "BACK EXTENSIONS", "Assisted Pull-up", "Wide-Grip Pull-Up", "Bent-over Row","Barbell", "Bench Press Kit", "Chest Bench Kit", "Dumnble Kit", "Chest Fly Machine", "Chest Press Machine", "Dip Machine", "Biceps Curl", "Triceps Dip", "Fly Machine", "Seated High Row", "Lat Pull-Down,Seated", "Shoulder Press", "Treadmill", "Stair Mill", "Rowing Machine", "Spin Bike", "Jacob's Ladder", "ARC Trainer"
@@ -30,6 +35,21 @@
         }
 
 
+        function logout() {
+            UserService
+                .logout()
+                .then(
+                    function (response) {
+                        $location.url("/home")
+                    },function (error) {
+                        $location.url("/home")
+                    }
+                )
+        }
+
+
 
     }
+
+
 })();

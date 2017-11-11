@@ -10,7 +10,7 @@ module.exports = function(app,userModel) {
     app.get("/auth/google", passport.authenticate('google', { scope : ['profile', 'email'] }));
     app.get("/auth/google/callback",
         passport.authenticate('google', {
-            successRedirect: '/#/category',
+            successRedirect: '/#/category/Abs',
             failureRedirect: '/#/home'
         }));
     app.get("/api/loggedIn",loggedIn);

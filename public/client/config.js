@@ -21,7 +21,7 @@
             })
 
 
-            .when("/category", {
+            .when("/category/:cname", {
                 templateUrl: "client/views/category/category.view.html",
                 controller: "CategoryController",
                 controllerAs: "model",

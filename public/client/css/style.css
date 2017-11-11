@@ -103,3 +103,9 @@ body{
 }
 
 /*******************************************/
+.right-line1{
+    height: 70vh;
+    border-right: 2px solid lightgrey;
+    margin-top: -12px;
+    padding-top: 10px;
+}
