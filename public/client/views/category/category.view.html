@@ -1,13 +1,29 @@
 <nav class=" header-style navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-    <div  class=" col-md-4 ">
+    <div  class=" col-md-4">
         <a href="#/category/Abs" class="navbar-brand">Gym Scheduler</a>
     </div>
 
+    <div  class=" col-md-7" >
+        <div class="pull-right">
+            <div class="input-group pull-right" style="margin-top: 10px; width: 600px">
+                <input type="text" class="form-control" placeholder="Search for Equipments, Trainers and Classes">
+                <span class="input-group-btn">
+                        <a href="#/type/Abs/instrument/Adjustable Sit Up Benches" class="btn btn-default" style="height: 34px">
+                             <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                </span>
+            </div>
 
-    <div  ng-show ="currentUser" class="col-md-8" style="padding-top: 15px">
 
-            <a style="color: white;font-size: large" ng-click="model.logout()" class="fa fa-sign-out pull-right" aria-hidden="true">Log out</a>
+
+        </div>
+    </div>
+
+
+    <div  ng-show ="currentUser" class="col-md-1 pull-right" style="padding-top: 15px">
+
+        <a style="color: white;font-size: large" ng-click="model.logout()" class="fa fa-sign-out pull-right" aria-hidden="true">Log out</a>
 
     </div>
 
@@ -51,7 +67,7 @@
 
     <div class="col-md-5" style="align:center" >
 
-        <h3 style="color: darkred">Equipments availabe under Category: {{model.categoryName}}</h3>
+        <h3 style="color: royalblue">Equipments availabe under Category: {{model.categoryName}}</h3>
 
         <ul class="list-group" style="margin-top: 70px">
 
