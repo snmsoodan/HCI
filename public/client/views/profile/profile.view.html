@@ -12,7 +12,7 @@
                     <li class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}}</li>
                 </ul>
                 <span class="input-group-btn">
-                        <a href="#/type/Abs/instrument/Adjustable Sit Up Benches" class="btn btn-default" style="height: 34px">
+                        <a ng-click="model.search(country)" class="btn btn-default" style="height: 34px">
                              <span class="glyphicon glyphicon-search"></span>
                         </a>
                 </span>

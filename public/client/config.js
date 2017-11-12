@@ -12,14 +12,13 @@
                     templateUrl: "client/views/login/login.view.html",
                     controller: "LoginController",
                     controllerAs: "model"
-                })
+            })
 
             .when("/home", {
                 templateUrl: "client/views/home/home.view.html",
                 controller: "HomeController",
                 controllerAs: "model"
             })
-
 
             .when("/category/:cname", {
                 templateUrl: "client/views/category/category.view.html",
@@ -48,13 +47,10 @@
                 }
             })
 
-            .when("/type/:tid/instrument/:id", {
+            .when("/category/:cid/instrument/:insId", {
                 templateUrl: "client/views/category/bookInstrument.view.html",
                 controller: "bookInstrumentController",
-                controllerAs: "model",
-                resolve:{
-                    loggedIn:checkLoggedIn
-                }
+                controllerAs: "model"
             })
 
             .when("/dashboard", {

@@ -29,6 +29,7 @@
         console.log(id)
 
         vm.currentUser=id;
+        vm.search=search;
 
         function init(){
             UserService
@@ -38,6 +39,18 @@
                 })
 
         }init();
+
+        function search(subcat) {
+            console.log(subcat)
+            for(var i in subCategories)
+            {
+                if(subcat===subCategories[i].name)
+                {
+                    $location.url("/category/"+subCategories[i].id+"/instrument/"+subCategories[i].name);
+                }
+            }
+
+        }
 
         function updateUser(newUser) {
             console.log(newUser)

@@ -18,8 +18,6 @@
                 </span>
             </div>
 
-
-
         </div>
     </div>
 
@@ -69,18 +67,24 @@
     <div class="col-md-2" style="align:center" >
 
     </div>
-    <!--{{model.userBookings}}-->
+    <!--{{model.ins}}-->
 
     <div class="col-md-5" style="align:center" >
 
-        <h3 style="color: royalblue">Reserved Equipments for today</h3>
+        <h3 style="color: royalblue">Book Equipment for: {{model.instrumentName}}</h3>
 
         <ul class="list-group" style="margin-top: 70px">
 
-            <li ng-repeat="p in model.userBookings" class="list-group-item" >
-                <a>{{p.insName}}</a> &nbsp; &nbsp; &nbsp; &nbsp;
-                <a>{{p.insTime}}</a>
-                <a ng-click="model.cancel(p.insName,p.insTime)" class="btn btn-success pull-right" style="height: 29px">Cancel Reservation</a>
+            <li ng-repeat="p in model.ins" class="list-group-item" >
+                <a>{{p.n}}</a>
+
+              <span ng-if="p.a=='t'">
+                <a ng-click="model.book(p._id,p.n)" class="btn btn-success pull-right" style="height: 29px">Book Instrument</a>
+              </span>
+
+              <span ng-if="p.a=='f'">
+                <a  class="btn btn-success pull-right" style="height: 29px" disabled="">Book Instrument</a>
+              </span>
 
             </li>
 
