@@ -37,15 +37,15 @@
         {id:"Legs",name:"Leg Press"},{id:"Legs",name:"Leg Extension"},{id:"Legs",name:"Hamstring Curl"},{id:"Legs",name:"Seated Calf Raise"},{id:"Legs",name:"Standing Calf Raise"},{id:"Legs",name:"Leg Abductor"}
     ]
 
-    function dashboardController($rootScope,$location,$routeParams,$scope) {
+    function dashboardController($rootScope,$location,$routeParams,$scope,UserService) {
         var vm = this;
 
         vm.categories=categories;
         vm.search=search;
-        vm.userBookings=[
-            {_id: "5a022f518d4ff92b84c7a098", userName: "Sanamdeep Singh", insName: "Adjustable Sit Up Benches", insTime: "1:30 - 2:00 PM"},
-            {_id: "5a022f518d4ff92b84c7a098", userName: "Sanamdeep Singh", insName: "Adjustable Sit Up Benches", insTime: "2:00 - 2:30 PM"}
-        ]
+        // vm.userBookings=[
+        //     {_id: "5a022f518d4ff92b84c7a098", userName: "Sanamdeep Singh", insName: "Adjustable Sit Up Benches", insTime: "1:30 - 2:00 PM"},
+        //     {_id: "5a022f518d4ff92b84c7a098", userName: "Sanamdeep Singh", insName: "Adjustable Sit Up Benches", insTime: "2:00 - 2:30 PM"}
+        // ]
 
         if($rootScope.currentUser) {
             var id = $rootScope.currentUser._id;
@@ -60,23 +60,49 @@
 
         vm.instrumentName=$routeParams.insId;
         vm.type=$routeParams.cid;
-        vm.book=book;
+        // vm.book=book;
         vm.cancel=cancel;
+        vm.logout=logout;
+
+
+        function logout() {
+            UserService
+                .logout()
+                .then(
+                    function (response) {
+                        $location.url("/home")
+                    },function (error) {
+                        $location.url("/home")
+                    }
+                )
+        }
 
         function init(){
 
+            UserService.findUserBookings($rootScope.currentUser._id)
+                .then(
+                    function (response) {
+                        vm.userBookings=response.data;
+                        console.log(vm.userBookings);
+                    },
+                    function (err) {
+                        vm.error="Error Not Found"
+                    }
+                )
 
-            console.log(vm.instrumentName)
-            console.log(vm.type)
-            for(var i in instruments)
-            {
-                if(instruments[i]._id===vm.instrumentName)
-                {
-                    vm.ins.push(instruments[i]);
-                }
-            }
+            // console.log(vm.instrumentName)
+            // console.log(vm.type)
+            // for(var i in instruments)
+            // {
+            //     if(instruments[i]._id===vm.instrumentName)
+            //     {
+            //         vm.ins.push(instruments[i]);
+            //     }
+            // }
+            //
+            // console.log(vm.ins);
 
-            console.log(vm.ins);
+
         }init();
 
         function search(subcat) {
@@ -91,42 +117,63 @@
 
         }
 
-        function book(name,time) {
-            if(!id)
-            {
-                $location.url("/home");
-            }
-            else
-            {
-                for(var i in instruments)
-                {
-                    if(instruments[i]._id===name&&instruments[i].n===time)
-                    {
-                        instruments[i].a="f";
-                        vm.userBookings.push({"_id":id,"userName":$rootScope.currentUser.firstName+" "+$rootScope.currentUser.lastName,"insName":name,"insTime":time})
-
-                    }
-                }
-            }
-        }
+        // function book(name,time) {
+        //     if(!id)
+        //     {
+        //         $location.url("/home");
+        //     }
+        //     else
+        //     {
+        //         for(var i in instruments)
+        //         {
+        //             if(instruments[i]._id===name&&instruments[i].n===time)
+        //             {
+        //                 instruments[i].a="f";
+        //                 vm.userBookings.push({"_id":id,"userName":$rootScope.currentUser.firstName+" "+$rootScope.currentUser.lastName,"insName":name,"insTime":time})
+        //
+        //             }
+        //         }
+        //     }
+        // }
 
         function cancel(name,time) {
 
-            for(var i in instruments)
-            {
-                if(instruments[i]._id===name&&instruments[i].n===time)
-                {
-                    instruments[i].a="t";
-                }
-            }
-                for(var i in vm.userBookings)
-                {
-                    if(vm.userBookings[i].insName===name&&vm.userBookings[i].insTime===time)
-                    {
-                        // instruments[i].a="f";
-                        vm.userBookings.splice(i,1);
+            UserService.cancel($rootScope.currentUser._id,name,time)
+                .then(
+                    function (response) {
+
+                        UserService.findUserBookings($rootScope.currentUser._id)
+                            .then(
+                                function (response) {
+                                    vm.userBookings=response.data;
+                                    console.log(vm.userBookings);
+                                },
+                                function (err) {
+                                    vm.error="Error Not Found"
+                                }
+                            )
+
+                    },
+                    function (err) {
+                        vm.error="Not Found";
                     }
-                }
+                )
+
+            // for(var i in instruments)
+            // {
+            //     if(instruments[i]._id===name&&instruments[i].n===time)
+            //     {
+            //         instruments[i].a="t";
+            //     }
+            // }
+            //     for(var i in vm.userBookings)
+            //     {
+            //         if(vm.userBookings[i].insName===name&&vm.userBookings[i].insTime===time)
+            //         {
+            //             // instruments[i].a="f";
+            //             vm.userBookings.splice(i,1);
+            //         }
+            //     }
         }
 
 

@@ -37,12 +37,13 @@
         {id:"Legs",name:"Leg Press"},{id:"Legs",name:"Leg Extension"},{id:"Legs",name:"Hamstring Curl"},{id:"Legs",name:"Seated Calf Raise"},{id:"Legs",name:"Standing Calf Raise"},{id:"Legs",name:"Leg Abductor"}
     ]
 
-    function bookInstrumentController($rootScope,$location,$routeParams,$scope) {
+    function bookInstrumentController($rootScope,$location,$routeParams,$scope,UserService) {
         var vm = this;
 
         vm.categories=categories;
         vm.search=search;
         vm.userBookings=[]
+        vm.logout=logout;
 
         if($rootScope.currentUser) {
             var id = $rootScope.currentUser._id;
@@ -59,20 +60,44 @@
         vm.type=$routeParams.cid;
         vm.book=book;
 
+
+        function logout() {
+            UserService
+                .logout()
+                .then(
+                    function (response) {
+                        $location.url("/home")
+                    },function (error) {
+                        $location.url("/home")
+                    }
+                )
+        }
+
         function init(){
 
 
-            console.log(vm.instrumentName)
-            console.log(vm.type)
-            for(var i in instruments)
-            {
-                if(instruments[i]._id===vm.instrumentName)
-                {
-                    vm.ins.push(instruments[i]);
-                }
-            }
+            // console.log(vm.instrumentName)
+            // console.log(vm.type)
 
-        console.log(vm.ins);
+            UserService.getInstuments(vm.instrumentName)
+                .then(
+                    function (response) {
+                        vm.ins=response.data;
+                        console.log(vm.ins);
+                    },
+                    function (err) {
+                        vm.error="Error Not Found"
+                    }
+                )
+            // for(var i in instruments)
+            // {
+            //     if(instruments[i]._id===vm.instrumentName)
+            //     {
+            //         vm.ins.push(instruments[i]);
+            //     }
+            // }
+
+        // console.log(vm.ins);
         }init();
 
         function search(subcat) {
@@ -88,23 +113,47 @@
         }
 
         function book(name,time) {
-            console.log(name);
-            console.log(time);
+            // console.log(name);
+            // console.log(time);
             if(!id)
             {
                 $location.url("/home");
             }
             else
             {
-                for(var i in instruments)
-                {
-                    if(instruments[i]._id===name&&instruments[i].n===time)
-                    {
-                        instruments[i].a="f";
-                        vm.userBookings.push({"_id":id,"userName":$rootScope.currentUser.firstName+" "+$rootScope.currentUser.lastName,"insName":name,"insTime":time})
-                        console.log(vm.userBookings)
-                    }
-                }
+
+                UserService.book(name,time,$rootScope.currentUser)
+                    .then(
+                        function (response) {
+                           // vm.success=response.data;
+
+                            UserService.getInstuments(vm.instrumentName)
+                                .then(
+                                    function (response) {
+                                        vm.ins=response.data;
+                                        console.log(vm.ins);
+                                    },
+                                    function (err) {
+                                        vm.error="Error Not Found"
+                                    }
+                                )
+
+                        },
+                        function (err) {
+                            vm.error="Error Not Found"
+                        }
+                    )
+
+
+                // for(var i in instruments)
+                // {
+                //     if(instruments[i]._id===name&&instruments[i].n===time)
+                //     {
+                //         instruments[i].a="f";
+                //         vm.userBookings.push({"_id":id,"userName":$rootScope.currentUser.firstName+" "+$rootScope.currentUser.lastName,"insName":name,"insTime":time})
+                //         console.log(vm.userBookings)
+                //     }
+                // }
             }
         }
 
