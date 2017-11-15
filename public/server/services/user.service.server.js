@@ -18,7 +18,7 @@ module.exports = function(app,userModel) {
         {"_id": "Adjustable Sit Up Benches", "n": "6:00 - 6:30 PM","a":"t"},
         {"_id": "Adjustable Sit Up Benches", "n": "6:30 - 7:00 PM","a":"t"},
         {"_id": "Adjustable Sit Up Benches", "n": "7:00 - 7:30 PM","a":"t"},
-        {"_id": "back", "n": "7:00 - 7:30 PM","a":"t"}
+        {"_id": "Barbell", "n": "7:00 - 7:30 PM","a":"t"}
     ]
 
 
@@ -152,6 +152,11 @@ module.exports = function(app,userModel) {
                     }
                     else {
                         var email = profile.emails[0].value;
+                        // if(email.indexOf("@husky")!==-1||email.indexOf('@ccs')!==-1)
+                        // {
+                        //     console.log("here")
+                        //     return done(400);
+                        // }
                         var emailParts = email.split("@");
                         var newGoogleUser = {
                             username:  emailParts[0],

@@ -147,6 +147,7 @@
                                 function (response) {
                                     vm.userBookings=response.data;
                                     console.log(vm.userBookings);
+                                    vm.success="Equipment reservation cancelled"
                                 },
                                 function (err) {
                                     vm.error="Error Not Found"

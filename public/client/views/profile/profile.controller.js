@@ -57,7 +57,7 @@
             UserService.updateUser(id,newUser)
                 .then(function (response) {
                     console.log(response.data);
-                    vm.success="Update Successfull";
+                    vm.success="User information updated Successfully";
                 })
         }
 

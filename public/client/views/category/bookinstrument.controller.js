@@ -37,7 +37,7 @@
         {id:"Legs",name:"Leg Press"},{id:"Legs",name:"Leg Extension"},{id:"Legs",name:"Hamstring Curl"},{id:"Legs",name:"Seated Calf Raise"},{id:"Legs",name:"Standing Calf Raise"},{id:"Legs",name:"Leg Abductor"}
     ]
 
-    function bookInstrumentController($rootScope,$location,$routeParams,$scope,UserService) {
+    function bookInstrumentController($rootScope,$location,$routeParams,$scope,UserService,$window) {
         var vm = this;
 
         vm.categories=categories;
@@ -113,25 +113,23 @@
         }
 
         function book(name,time) {
-            // console.log(name);
-            // console.log(time);
             if(!id)
             {
+                $window.alert("Sign in using your Husky ID to reserve Equipments")
                 $location.url("/home");
             }
             else
             {
-
                 UserService.book(name,time,$rootScope.currentUser)
                     .then(
                         function (response) {
-                           // vm.success=response.data;
 
                             UserService.getInstuments(vm.instrumentName)
                                 .then(
                                     function (response) {
                                         vm.ins=response.data;
                                         console.log(vm.ins);
+                                        vm.success="Equipment has been booked"
                                     },
                                     function (err) {
                                         vm.error="Error Not Found"
