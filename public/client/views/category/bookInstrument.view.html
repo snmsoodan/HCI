@@ -7,7 +7,7 @@
     <div  class=" col-md-7" >
         <div class="pull-right">
             <div class="input-group pull-right" style="margin-top: 10px; width: 600px">
-                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" />
+                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" placeholder="Search for Gym Equipments"/>
                 <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
                     <li class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}}</li>
                 </ul>
@@ -56,9 +56,9 @@
             </li>
 
             <li ng-repeat="category in model.categories" class="list-group-item"   >
-                <a ng-if="category.name==model.categoryName" href="#/category/{{category.name}}"><b style="font-size: medium">{{category.name}}</b></a>
+                <a ng-if="category.name==model.type" href="#/category/{{category.name}}"><b style="font-size: medium">{{category.name}}</b></a>
 
-                <a ng-if="category.name!=model.categoryName" href="#/category/{{category.name}}">{{category.name}}</a>
+                <a ng-if="category.name!=model.type" href="#/category/{{category.name}}">{{category.name}}</a>
             </li>
 
         </ul>
@@ -74,7 +74,7 @@
            {{model.success}}
         </div>
 
-        <h3 style="color: royalblue">Book Equipment for: {{model.instrumentName}}</h3>
+        <h3 style="color: royalblue">Book Equipment for: <span style="color: red;">{{model.instrumentName}}</span></h3>
 
         <ul class="list-group" style="margin-top: 70px">
 

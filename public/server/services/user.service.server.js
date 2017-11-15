@@ -18,7 +18,641 @@ module.exports = function(app,userModel) {
         {"_id": "Adjustable Sit Up Benches", "n": "6:00 - 6:30 PM","a":"t"},
         {"_id": "Adjustable Sit Up Benches", "n": "6:30 - 7:00 PM","a":"t"},
         {"_id": "Adjustable Sit Up Benches", "n": "7:00 - 7:30 PM","a":"t"},
-        {"_id": "Barbell", "n": "7:00 - 7:30 PM","a":"t"}
+        {    "_id": "Bench Press Kit", "n": "1:00 - 1:30 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "1:30 - 2:00 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "2:00 - 2:30 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "2:30 - 3:00 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "3:00 - 3:30 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "3:30 - 4:00 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "4:00 - 4:30 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "4:30 - 5:00 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "5:00 - 5:30 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "5:30 - 6:00 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "6:00 - 6:30 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "6:30 - 7:00 PM","a":"t"},
+    {"_id": "Bench Press Kit", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Chest Bench Kit", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Chest Bench Kit", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Dumbbell Kit", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Dumbbell Kit", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Chest Fly Machine", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Chest Fly Machine", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Chest Press Machine", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Chest Press Machine", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Dip Machine", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Dip Machine", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Biceps Curl", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Biceps Curl", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Triceps Dip", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Triceps Dip", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Fly Machine", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Fly Machine", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Seated High Row", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Seated High Row", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Lat Pull-Down,Seated", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Lat Pull-Down,Seated", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Shoulder Press", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Shoulder Press", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "ARC Trainer", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "ARC Trainer", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Jacob's Ladder", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Jacob's Ladder", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Spin Bike", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Spin Bike", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Rowing Machine", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Rowing Machine", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Stair Mill", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Stair Mill", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Treadmill", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Treadmill", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Treadmill", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Treadmill", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Treadmill", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Treadmill", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Treadmill", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Treadmill", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Treadmill", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Treadmill", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Treadmill", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Treadmill", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Treadmill", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Leg Abductor", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Leg Abductor", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Standing Calf Raise", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Standing Calf Raise", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Seated Calf Raise", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Seated Calf Raise", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Hamstring Curl", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Hamstring Curl", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Leg Extension", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Leg Extension", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Leg Press", "n": "1:00 - 1:30 PM","a":"t"},
+        {"_id": "Leg Press", "n": "1:30 - 2:00 PM","a":"t"},
+        {"_id": "Leg Press", "n": "2:00 - 2:30 PM","a":"t"},
+        {"_id": "Leg Press", "n": "2:30 - 3:00 PM","a":"t"},
+        {"_id": "Leg Press", "n": "3:00 - 3:30 PM","a":"t"},
+        {"_id": "Leg Press", "n": "3:30 - 4:00 PM","a":"t"},
+        {"_id": "Leg Press", "n": "4:00 - 4:30 PM","a":"t"},
+        {"_id": "Leg Press", "n": "4:30 - 5:00 PM","a":"t"},
+        {"_id": "Leg Press", "n": "5:00 - 5:30 PM","a":"t"},
+        {"_id": "Leg Press", "n": "5:30 - 6:00 PM","a":"t"},
+        {"_id": "Leg Press", "n": "6:00 - 6:30 PM","a":"t"},
+        {"_id": "Leg Press", "n": "6:30 - 7:00 PM","a":"t"},
+        {"_id": "Leg Press", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "SEATED CABLE ROW", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "BACK EXTENSIONS", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "BACK EXTENSIONS", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Assisted Pull-up", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Assisted Pull-up", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Wide-Grip Pull-Up", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Bent-over Row", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Barbell", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Barbell", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Bar", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Bar", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Bar", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Bar", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Bar", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Bar", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Bar", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Ab Wheel", "n": "7:00 - 7:30 PM","a":"t"},
+
+
+        {"_id": "Stability Ball", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Stability Ball", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Roman Chairs", "n": "7:00 - 7:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "1:00 - 1:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "1:30 - 2:00 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "2:00 - 2:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "2:30 - 3:00 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "3:00 - 3:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "3:30 - 4:00 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "4:00 - 4:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "4:30 - 5:00 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "5:00 - 5:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "5:30 - 6:00 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "6:00 - 6:30 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "6:30 - 7:00 PM","a":"t"},
+
+        {"_id": "Hyper Bench", "n": "7:00 - 7:30 PM","a":"t"}
+
     ]
 
 
@@ -47,7 +681,8 @@ module.exports = function(app,userModel) {
     app.get("/auth/google", passport.authenticate('google', { scope : ['profile', 'email'] }));
     app.get("/auth/google/callback",
         passport.authenticate('google', {
-            successRedirect: '/#/category/Abs',
+            // successRedirect: '/#/category/Abs',
+            successRedirect: '/#/profile',
             failureRedirect: '/#/home'
         }));
     app.get("/api/loggedIn",loggedIn);

@@ -7,7 +7,7 @@
     <div  class=" col-md-7" >
         <div class="pull-right">
             <div class="input-group pull-right" style="margin-top: 10px; width: 600px">
-                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" />
+                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" placeholder="Search for Gym Equipments"/>
                 <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
                     <li class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}}</li>
                 </ul>
@@ -40,10 +40,10 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-             <a href="#/profile"><b style="font-size: medium">Profile</b></a>
+             <a href="#/profile"><b style="font-size: large">Profile</b></a>
             </li>
             <li class="list-group-item">
-                <a href="#/dashboard">Dashboard</a>
+                <a style="font-size: large" href="#/dashboard">Dashboard</a>
             </li>
 
 

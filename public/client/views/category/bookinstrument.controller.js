@@ -49,7 +49,6 @@
             var id = $rootScope.currentUser._id;
             console.log(id)
         }
-        console.log(id);
 
 
         vm.ins=[]

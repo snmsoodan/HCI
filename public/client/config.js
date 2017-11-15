@@ -23,10 +23,11 @@
             .when("/category/:cname", {
                 templateUrl: "client/views/category/category.view.html",
                 controller: "CategoryController",
-                controllerAs: "model",
-                resolve:{
-                    loggedIn:checkLoggedIn
-                }
+                controllerAs: "model"
+                // ,
+                // resolve:{
+                //     loggedIn:checkLoggedIn
+                // }
             })
 
             .when("/profile", {

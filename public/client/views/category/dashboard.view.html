@@ -7,7 +7,7 @@
     <div  class=" col-md-7" >
         <div class="pull-right">
             <div class="input-group pull-right" style="margin-top: 10px; width: 600px">
-                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" />
+                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" placeholder="Search for Gym Equipments"/>
                 <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
                     <li class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}}</li>
                 </ul>
@@ -45,10 +45,10 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-             <a href="#/profile"> Profile</a>
+             <a style="font-size: large" href="#/profile"> Profile</a>
             </li>
             <li class="list-group-item">
-                <a href="#/dashboard"><b style="font-size: medium">Dashboard</b></a>
+                <a href="#/dashboard"><b style="font-size: large">Dashboard</b></a>
             </li>
         </ul>
 
@@ -78,8 +78,9 @@
         {{model.success}}
         </div>
         <h3 style="color: royalblue">Equipment Reservations for today</h3>
+        <!--{{model.userBookings.length}}-->
 
-
+        <p style="font-size: large;color: red" ng-if="model.userBookings.length===0">You have not Reserved any equipments for Today</p>
 
 
         <ul class="list-group" style="margin-top: 70px">

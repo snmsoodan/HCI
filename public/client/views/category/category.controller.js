@@ -23,9 +23,17 @@
 
         vm.categoryName=$routeParams.cname;
         console.log(vm.categoryName);
-        var id=$rootScope.currentUser._id;
-        console.log(id)
+
+
+        if($rootScope.currentUser) {
+            var id = $rootScope.currentUser._id;
+        }
+
         vm.currentUser=id;
+        console.log(vm.currentUser)
+        // var id=$rootScope.currentUser._id;
+        // console.log(id)
+
         vm.search=search;
 
         function init(){

@@ -1,13 +1,26 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
 
-            <p class="navbar-brand" href="#" style="color: red;">
-                Gym Scheduler
-            </p>
+            <!--<p class="navbar-brand" href="#" style="color: red;">-->
+                <!--Gym Scheduler-->
+            <!--</p>-->
 
-        </div>
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+<nav class=" header-style navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div  class=" col-md-4">
+        <a href="#/home" class="navbar-brand">Gym Scheduler</a>
     </div>
+
+    <div  class=" col-md-7" >
+
+    </div>
+
+
+
 </nav>
 
 <h2 align="center" style="margin-top: 300px; color: red">Gym Scheduler</h2>
@@ -19,7 +32,7 @@
             <!--<input type="text" ng-model="searchString" class="form-control" placeholder="Search for Equipments, Trainers and Classes" />-->
 
 
-            <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" />
+            <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" placeholder="Search for Gym Equipments" />
             <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
                 <li class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}}</li>
             </ul>
@@ -38,7 +51,8 @@
 
         <a href="/auth/google" class="btn btn-danger " style="width: 250px">
             <span class="fa fa-google-plus" ></span>
-            Google
+           <b> Login</b>
         </a>
+        <p>Please Login With your Husky ID</p>
 
     </div>

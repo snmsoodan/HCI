@@ -7,7 +7,7 @@
     <div  class=" col-md-7" >
         <div class="pull-right">
             <div class="input-group pull-right" style="margin-top: 10px; width: 600px">
-                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" />
+                <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" placeholder="Search for Gym Equipments"/>
                 <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
                     <li class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}}</li>
                 </ul>
@@ -17,16 +17,24 @@
                         </a>
                 </span>
             </div>
-
-
-
         </div>
     </div>
 
 
+    <!--<div  ng-show ="currentUser" class="col-md-1 pull-right" style="padding-top: 15px">-->
+
+        <!--<a style="color: white;font-size: large" ng-click="model.logout()" class="fa fa-sign-out pull-right" aria-hidden="true">Log out</a>-->
+
+    <!--</div>-->
     <div  ng-show ="currentUser" class="col-md-1 pull-right" style="padding-top: 15px">
 
         <a style="color: white;font-size: large" ng-click="model.logout()" class="fa fa-sign-out pull-right" aria-hidden="true">Log out</a>
+
+    </div>
+
+    <div  ng-show ="!currentUser" class="col-md-1 pull-right" style="padding-top: 15px">
+
+        <a style="color: white;font-size: large" href="#/home" class="fa fa-sign-in pull-right" aria-hidden="true"> &nbsp;Log in</a>
 
     </div>
 
@@ -40,10 +48,10 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-             <a href="#/profile"> Profile</a>
+             <a style="font-size: large" href="#/profile"> Profile</a>
             </li>
             <li class="list-group-item">
-                <a href="#/dashboard">Dashboard</a>
+                <a style="font-size: large" href="#/dashboard">Dashboard</a>
             </li>
 
 
@@ -70,7 +78,7 @@
 
     <div class="col-md-5" style="align:center" >
 
-        <h3 style="color: royalblue">Equipments availabe under Category: {{model.categoryName}}</h3>
+        <h3 style="color: royalblue">Equipments availabe under Category: <span style="color: red;">{{model.categoryName}}</span></h3>
 
         <ul class="list-group" style="margin-top: 70px">
 
