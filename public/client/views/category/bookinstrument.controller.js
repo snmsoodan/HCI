@@ -119,27 +119,48 @@
             }
             else
             {
-                UserService.book(name,time,$rootScope.currentUser)
+
+                UserService.findUserBookings($rootScope.currentUser._id)
                     .then(
                         function (response) {
+                            vm.userBookings=response.data;
+                            console.log(vm.userBookings.length);
+                            if(vm.userBookings.length=="8")
+                            {
+                                vm.error="Cannot book more than 8 Equipments"
+                                console.log(vm.error)
+                            }
+                            else{
+                                UserService.book(name,time,$rootScope.currentUser)
+                                    .then(
+                                        function (response) {
 
-                            UserService.getInstuments(vm.instrumentName)
-                                .then(
-                                    function (response) {
-                                        vm.ins=response.data;
-                                        console.log(vm.ins);
-                                        vm.success="Equipment has been booked"
-                                    },
-                                    function (err) {
-                                        vm.error="Error Not Found"
-                                    }
-                                )
+                                            UserService.getInstuments(vm.instrumentName)
+                                                .then(
+                                                    function (response) {
+                                                        vm.ins=response.data;
+                                                        console.log(vm.ins);
+                                                        vm.success="Equipment has been booked"
+                                                    },
+                                                    function (err) {
+                                                        vm.error="Error Not Found"
+                                                    }
+                                                )
 
+                                        },
+                                        function (err) {
+                                            vm.error="Error Not Found"
+                                        }
+                                    )
+                            }
                         },
                         function (err) {
                             vm.error="Error Not Found"
                         }
                     )
+
+
+
 
 
                 // for(var i in instruments)

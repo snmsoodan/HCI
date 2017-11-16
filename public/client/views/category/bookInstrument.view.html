@@ -17,7 +17,6 @@
                         </a>
                 </span>
             </div>
-
         </div>
     </div>
 
@@ -43,10 +42,10 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-             <a href="#/profile"> Profile</a>
+             <a style="font-size: large" href="#/profile"> Profile</a>
             </li>
             <li class="list-group-item">
-                <a href="#/dashboard">Dashboard</a>
+                <a style="font-size: large" href="#/dashboard">Dashboard</a>
             </li>
         </ul>
 
@@ -70,8 +69,11 @@
     <!--{{model.ins}}-->
 
     <div class="col-md-5" style="align:center" >
-        <div ng-show="model.success" class="alert alert-success" role="alert">
+        <div ng-if="model.success&&!model.error" class="alert alert-success" role="alert">
            {{model.success}}
+        </div>
+        <div ng-if="model.error" class="alert alert-danger" role="alert">
+            {{model.error}}
         </div>
 
         <h3 style="color: royalblue">Book Equipment for: <span style="color: red;">{{model.instrumentName}}</span></h3>
