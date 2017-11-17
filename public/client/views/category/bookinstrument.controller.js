@@ -140,7 +140,7 @@
                                                     function (response) {
                                                         vm.ins=response.data;
                                                         console.log(vm.ins);
-                                                        vm.success="Equipment has been booked"
+                                                        vm.success="Equipment reserved. Check dashboard for modifications"
                                                     },
                                                     function (err) {
                                                         vm.error="Error Not Found"
